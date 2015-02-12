@@ -1,6 +1,6 @@
 var wordOrder = function(string) {
   var words = string.split(" ").map(function(word) {
-    return word.toLowerCase().replace(/\W+/,"");
+    return word.toLowerCase().replace(/[.?!,;:()"]+/,"");
   });
   var wordCounts = {};
 
