@@ -27,3 +27,17 @@ var wordOrder = function(string) {
     return obj.keyName;
   });
 };
+
+$(document).ready(function() {
+  $("form#string_to_word_order").submit(function(event) {
+    var userString = $("input#userString").val();
+    var wordOrderResult = wordOrder(userString);
+
+    wordOrderResult.forEach(function(word) {
+      $("ul").append("<li>" + word + "</li>");
+    });
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
