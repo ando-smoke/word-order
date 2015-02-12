@@ -1,0 +1,8 @@
+#result {
+  display: none;
+}
+
+.word-list {
+  font-style: italic;
+  font-weight: bold;
+}
